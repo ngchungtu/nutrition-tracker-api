@@ -1,0 +1,27 @@
+POST http://localhost:5500/login
+Content-Type: application/json
+
+{
+    "email":"asd@gmail.com",
+    "password":"111111"
+}
+
+###
+POST http://localhost:5500/logout
+Content-Type: application/json
+
+{
+    "token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJpYXQiOjE3MDYxNDk0NTUsImV4cCI6MTcwNjE0OTUxNX0.EiX7q9pdNJ48rY7BB6nAGJ-e6Gw8YKNUxN8qE3UtFuo"
+}
+
+###
+POST http://localhost:5500/refeshToken
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY0BnbWFpbC5jb20iLCJpYXQiOjE3MDYxNDk0OTB9.6ROQLHJTgJcdvxHxAIoziwSjbFWUXncJnTayzf1gut0"
+}
+
+###
+GET http://localhost:5000/foods
+Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzZEBnbWFpbC5jb20iLCJpYXQiOjE3MDg1NDI4NzEsImV4cCI6MTcwODU0NjQ3MX0.xmyXk-ZS4_WiOZ6MbUDbncHomOVD6BJmn29qo2R7x3Q
