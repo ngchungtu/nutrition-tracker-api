@@ -38,7 +38,7 @@ app.post("/foods", verifyToken, async (req, res) => {
 })
 
 
-app.get("/foods", verifyToken, async (req, res) => {
+app.get("/foods", async (req, res) => {
     try {
         let foods = await foodModel.find()
         res.status(200).send(foods)
