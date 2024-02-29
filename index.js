@@ -15,6 +15,14 @@ dotenv.config()
 const app = express();
 app.use(cors())
 
+const cors = require('cors');
+const corsOptions ={
+    origin:'https://nutrition-tracking.vercel.app', 
+    credentials:true,
+    optionSuccessStatus:200
+}
+app.use(cors(corsOptions));
+
 const PORT = process.env.PORT
 let refeshTokens = []
 
