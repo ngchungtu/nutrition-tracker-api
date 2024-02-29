@@ -21,7 +21,7 @@ let refeshTokens = []
 app.use(express.json({ limit: '350mb' }))
 app.use(express.urlencoded({ extended: true, limit: '350mb' }))
 
-// connectToMongo()
+connectToMongo()
 app.listen(PORT, () => {
     try {
         connectToMongo()
