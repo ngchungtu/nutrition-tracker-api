@@ -15,12 +15,6 @@ dotenv.config()
 const app = express();
 app.use(cors())
 
-const corsOptions = {
-    credentials: true,
-    optionSuccessStatus: 200
-}
-app.use(cors(corsOptions));
-
 const PORT = process.env.PORT
 let refeshTokens = []
 
