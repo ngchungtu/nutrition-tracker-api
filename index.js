@@ -25,15 +25,15 @@ app.use(express.urlencoded({ extended: true, limit: '50mb' }))
 //     }
 // }
 /* #endregion */
-
-app.listen(PORT, () => {
-    try {
-        connectToMongo()
-        console.log(`Connect to DB successfully, port: ${PORT}`);
-    } catch (error) {
-        console.log(err_types.errLog[500]);
-    }
-});
+connectToMongo()
+// app.listen(PORT, () => {
+//     try {
+//         connectToMongo()
+//         console.log(`Connect to DB successfully, port: ${PORT}`);
+//     } catch (error) {
+//         console.log(err_types.errLog[500]);
+//     }
+// });
 
 app.get("/foods", async (req, res) => {
     try {
