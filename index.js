@@ -10,12 +10,10 @@ import { trackingModel } from './models/trackingModels.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { userModel } from './models/userModels.js';
-import bodyParser from 'body-parser';
 
 dotenv.config()
 const app = express();
 app.use(cors())
-app.use(bodyParser.json());
 
 // const corsOptions = {
 //     origin: 'https://nutrition-tracking.vercel.app',
