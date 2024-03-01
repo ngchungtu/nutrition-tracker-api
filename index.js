@@ -10,15 +10,17 @@ import { trackingModel } from './models/trackingModels.js';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
 import { userModel } from './models/userModels.js';
+import bodyParser from 'body-parser';
 
 dotenv.config()
 const app = express();
 // app.use(cors())
+app.use(bodyParser.json());
 
-const corsOptions ={
-    origin:'https://nutrition-tracking.vercel.app', 
-    credentials:true,
-    optionSuccessStatus:200
+const corsOptions = {
+    origin: 'https://nutrition-tracking.vercel.app',
+    credentials: true,
+    optionSuccessStatus: 200
 }
 app.use(cors(corsOptions));
 
@@ -27,7 +29,7 @@ let refeshTokens = []
 
 app.use(express.json({ limit: '350mb' })) // giới hạn dữ liệu truyền lên
 
-app.use(express.urlencoded({ extended: true, limit: '350mb' })) 
+app.use(express.urlencoded({ extended: true, limit: '350mb' }))
 //Nó mang ý nghĩa là một đối tượng body chứa dữ liệu mà đã được parsed sẽ được đưa vào request (có thể hiểu là req.body). Dữ liệu đó là một cặp key-value, trong đó value có thể là array hoặc string nếu extended: false và các loại còn lại nếu extended: true.
 
 connectToMongo()
@@ -107,7 +109,7 @@ app.get('/track/:userid/:date', verifyToken, async (req, res) => {
 /* #endregion */
 
 /* #region  user login */
-app.post('/register',  async (req, res) => {
+app.post('/register', async (req, res) => {
     let user = req.body
     console.log('user', user);
     bcrypt.genSalt(10, (err, salt) => {
