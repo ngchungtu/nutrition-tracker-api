@@ -145,6 +145,7 @@ app.post("/refeshToken", (req, res) => {
 })
 
 app.post('/login', async (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*")
     let userCred = req.body
     console.log(userCred);
     try {
