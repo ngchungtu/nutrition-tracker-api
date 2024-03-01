@@ -14,15 +14,15 @@ import bodyParser from 'body-parser';
 
 dotenv.config()
 const app = express();
-// app.use(cors())
+app.use(cors())
 app.use(bodyParser.json());
 
-const corsOptions = {
-    origin: 'https://nutrition-tracking.vercel.app',
-    credentials: true,
-    optionSuccessStatus: 200
-}
-app.use(cors(corsOptions));
+// const corsOptions = {
+//     origin: 'https://nutrition-tracking.vercel.app',
+//     credentials: true,
+//     optionSuccessStatus: 200
+// }
+// app.use(cors(corsOptions));
 
 const PORT = process.env.PORT
 let refeshTokens = []
@@ -147,7 +147,7 @@ app.post("/refeshToken", (req, res) => {
 })
 
 app.post('/login', async (req, res) => {
-    res.header("Access-Control-Allow-Origin", "*")
+    // res.header("Access-Control-Allow-Origin", "*")
     let userCred = req.body
     console.log(userCred);
     try {
