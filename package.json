@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js",
-    "serveAuthen": "node serverAuthen.js",
-    "serveData": "node serverData.js"
+    "start": "nodemon index.js",
+    "serveAuthen": "nodemon serverAuthen.js",
+    "serveData": "nodemon serverData.js"
   },
   "keywords": [],
   "author": "",
