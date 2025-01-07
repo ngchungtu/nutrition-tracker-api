@@ -36,4 +36,4 @@ Content-Type: application/json
 
 ###
 GET http://localhost:5000/foods
-Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzZEBnbWFpbC5jb20iLCJpYXQiOjE3MDg1NDI4NzEsImV4cCI6MTcwODU0NjQ3MX0.xmyXk-ZS4_WiOZ6MbUDbncHomOVD6BJmn29qo2R7x3Q
+# Authorization: Beaer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFzZEBnbWFpbC5jb20iLCJpYXQiOjE3MDg1NDI4NzEsImV4cCI6MTcwODU0NjQ3MX0.xmyXk-ZS4_WiOZ6MbUDbncHomOVD6BJmn29qo2R7x3Q
