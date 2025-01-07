@@ -35,7 +35,7 @@ connectToMongo()
 app.listen(PORT, () => {
     try {
         connectToMongo()
-        console.log(`Connect to DB successfully, port: ${PORT}`);
+        console.log(`Connect to port default: ${PORT}`);
     } catch (error) {
         console.log(err_types.errLog[500]);
     }
@@ -179,11 +179,11 @@ app.post('/login', async (req, res) => {
                 }
             })
         } else {
-            console.log(err_types.errLog[404]);
+            console.log(err_types.errLog[401]);
             res.status(404).send({ message: 'Cannot find User' })
         }
     } catch (error) {
-        console.log(err_types.errLog[404]);
+        console.log(err_types.errLog[401]);
         res.status(500).send({ message: 'Cannot Login' })
     }
 })
