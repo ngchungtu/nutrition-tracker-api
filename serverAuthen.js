@@ -11,8 +11,8 @@ const app = express();
 app.use(cors())
 dotenv.config()
 
-app.use(express.json({ limit: '500mb' }))
-app.use(express.urlencoded({ extended: true, limit: '500mb' }))
+app.use(express.json({ limit: '350mb' }))
+app.use(express.urlencoded({ extended: true, limit: '350mb' }))
 
 const PORT = process.env.PORT_AUTHEN
 
