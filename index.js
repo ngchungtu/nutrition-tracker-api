@@ -80,7 +80,7 @@ app.get("/foods/:name", verifyToken, async (req, res) => {
 })
 /* #endregion */
 
-/* #region  track API */
+/* #region  track API. */
 app.post('/track', verifyToken, async (req, res) => {
     let trackingData = req.body
     try {
